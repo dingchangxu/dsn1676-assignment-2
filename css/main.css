@@ -1,0 +1,95 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*::begore, *::agter {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    text-align: center;
+}
+
+.btn-forwards {
+    margin: 1.75rem;
+    display: inline-block;
+    background-color: green;
+    border-radius: 50%;
+    width: 6em;
+    color: #fff;
+    text-decoration: none;  
+    line-height: 6em;
+    text-align: center;
+    transition: all .4s linear;
+}
+
+.btn-backwards {
+    margin: 1.75rem;
+    display: inline-block;
+    background-color: red;
+    border-radius: 50%;
+    width: 6em;
+    color: #fff;
+    text-decoration: none;  
+    line-height: 6em;
+    text-align: center;
+    transition: all .4s linear;
+}
+
+.btn-forwards:hover {
+    opacity: 1;
+    background-color: #fff;
+    color: black;
+}
+
+.btn-backwards:hover {
+    opacity: 1;
+    background-color: #fff;
+    color: black;
+}
+
+.clock-face {
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../image/clock-face.svg");
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+.hand-hour {
+    width: 14px;
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% - 7px);
+    transition: 6000ms;
+    transform-origin: center bottom;
+}
+
+.minute-hand {
+    width: 14px;
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% - 7px);
+    transition: 6000ms;
+    transform-origin: center bottom;
+}
+
+.center {
+    width: 28px;
+    position: absolute;
+    bottom: calc(50% - 14px);
+    left: calc(50% - 14px);
+}
+
+.clock-face:target .hand-hour {
+    transform: rotate(360deg); 
+}
+
+.clock-face:target .minute-hand {
+    transform: rotate(4320deg); 
+}
